@@ -4,7 +4,7 @@ export const todoReducer = (state = [], action) => {
             state = [...state, action.todo]
             return state
         case 'ERROR':
-            console.log('has been error', action.err)
+            console.log('has been error, ', action.err)
             return state
         default:
             return state

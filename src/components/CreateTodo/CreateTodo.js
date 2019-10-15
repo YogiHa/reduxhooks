@@ -1,13 +1,17 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { createTodo } from '../../store/actions/todoActions';
 import { Grid, TextField, Button } from '@material-ui/core';
 
 export default function CreateTodo() {
-
+    const dispatch = useDispatch()
     const [todo, setTodo] = React.useState('');
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(todo)
+        dispatch(createTodo(todo));
+        let frm = document.getElementsByName('contact-form')[0];
+        frm.reset();
     }
 
     return (
