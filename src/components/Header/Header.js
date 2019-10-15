@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography } from '@material-ui/core';
 
 export default function Header() {
     return (
-        <AppBar style={{background: '#2E3B55'}}>
+        <AppBar style={{background: '#2E3B55'}} position="sticky">
 		<Toolbar>
 		<Typography variant="h3" align="left">
 		Todo       
