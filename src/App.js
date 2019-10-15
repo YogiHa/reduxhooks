@@ -14,7 +14,8 @@ function App() {
           {
           	data.map((todo,index) => (
           		<Todo
-          		  todo={todo}
+          		  todo={todo.content}
+                isCompleted={todo.isCompleted}
           		  key={index}
           		  index={index}
           		  />
